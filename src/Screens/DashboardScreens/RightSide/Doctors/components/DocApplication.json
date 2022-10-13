@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "Fname": "Rea",
+    "Lname": "Sehlako",
+    "Location": "Johanessburg",
+    "Email": "rea@gmail.com",
+    "PhoneNumber": "1234567890",
+    "Speciality": "Dentist",
+    "MedicalRegistrationNumber": "23456789",
+    "MedicalRegistrationCouncil": "SAMC",
+    "YearsExperince": "5 years",
+    "PlaceofStudy": "UNISA",
+    "PatientsaDay": "5",
+    "HasClinic": "No"
+  },
+
+  {
+    "id": 2,
+    "Fname": "Manqoba",
+    "Lname": "Ngubeni",
+    "Location": "Johanessburg",
+    "Email": "man@gmail.com",
+    "PhoneNumber": "1234567890",
+    "Speciality": "Dentist",
+    "MedicalRegistrationNumber": "23456789",
+    "MedicalRegistrationCouncil": "SAMC",
+    "YearsExperince": "5 years",
+    "PlaceofStudy": "UNISA",
+    "PatientsaDay": "5",
+    "HasClinic": "No"
+  },
+
+  {
+    "id": 3,
+    "Fname": "Siya",
+    "Lname": "Dlhams",
+    "Location": "Cape Town",
+    "Email": "siya@gmail.com",
+    "PhoneNumber": "1234567890",
+    "Speciality": "General Practitioner",
+    "MedicalRegistrationNumber": "23456789",
+    "MedicalRegistrationCouncil": "SAMC",
+    "YearsExperince": "5 years",
+    "PlaceofStudy": "UNISA",
+    "PatientsaDay": "5",
+    "HasClinic": "No"
+  },
+
+  {
+    "id": 4,
+    "Fname": "Oratile",
+    "Lname": "Tlhabs",
+    "Location": "North West",
+    "Email": "ora@gmail.com",
+    "PhoneNumber": "1234567890",
+    "Speciality": "General Practitioner",
+    "MedicalRegistrationNumber": "23456789",
+    "MedicalRegistrationCouncil": "SAMC",
+    "YearsExperince": "5 years",
+    "PlaceofStudy": "UNISA",
+    "PatientsaDay": "5",
+    "HasClinic": "No"
+  },
+
+  {
+    "id": 5,
+    "Fname": "Butiza",
+    "Lname": "Mabodze",
+    "Location": "Limpopo",
+    "Email": "buti@gmail.com",
+    "PhoneNumber": "1234567890",
+    "Speciality": "General Practitioner",
+    "MedicalRegistrationNumber": "23456789",
+    "MedicalRegistrationCouncil": "SAMC",
+    "YearsExperince": "5 years",
+    "PlaceofStudy": "UNISA",
+    "PatientsaDay": "5",
+    "HasClinic": "No"
+  },
+
+  {
+    "id": 6,
+    "Fname": "Sabelo",
+    "Lname": "Khumalo",
+    "Location": "Soweto",
+    "Email": "sab@gmail.com",
+    "PhoneNumber": "1234567890",
+    "Speciality": "Dematologist",
+    "MedicalRegistrationNumber": "23456789",
+    "MedicalRegistrationCouncil": "SAMC",
+    "YearsExperince": "5 years",
+    "PlaceofStudy": "UNISA",
+    "PatientsaDay": "5",
+    "HasClinic": "No"
+  }
+]

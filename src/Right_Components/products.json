@@ -1,0 +1,27 @@
+[
+
+    {
+        "id": 1,
+        "image": "images/doctor.jpg",
+        "name": "Honey",
+        "sales": "10K+ sales",
+        "revenue": "$1.4M"
+    },
+    
+    {
+        "id": 2,
+        "image": "images/doctor2.jpg",
+        "name": "Yarrow",
+        "sales": "10K+ sales",
+        "revenue": "$1.4M"
+    },
+    
+    {
+        "id": 3,
+        "image": "images/doctor3.jpg",
+        "name": "Ginger",
+        "sales": "10K+ sales",
+        "revenue": "$1.4M"
+    }
+    
+    ]

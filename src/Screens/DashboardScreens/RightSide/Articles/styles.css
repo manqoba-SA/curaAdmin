@@ -1,0 +1,35 @@
+.articles-screen {
+  margin: 0 15px;
+}
+
+.articles-screen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.add-btn-wrap {
+  display: flex;
+  /* align-items: center; */
+  justify-content: end;
+  width: 20%;
+}
+.articles-add-btn {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #409849;
+  color: #409849;
+  border-radius: 5px;
+  padding: 10px 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.articles-add-btn:hover {
+  background-color: #409849;
+  color: #fff;
+}

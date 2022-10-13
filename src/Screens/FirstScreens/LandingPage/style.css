@@ -1,0 +1,136 @@
+.container {
+  width: 1170px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: auto;
+}
+
+/* Start Landing Page */
+
+.landing-page {
+  position: relative;
+  background-color: #fff;
+}
+
+.landing-page .header-area {
+  display: flex;
+  padding: 25px 0 0;
+  position: relative;
+}
+
+.landing-page .header-area .logo {
+  text-transform: uppercase;
+  font-style: italic;
+  margin-top: 10px;
+  font-size: 19px;
+  width: 300px;
+  color: #5d5d5d;
+}
+
+.landing-page .header-area .links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: right;
+}
+
+.landing-page .header-area .links li {
+  display: inline-block;
+  margin-left: 30px;
+  color: #5d5d5d;
+  cursor: pointer;
+}
+
+.landing-page .header-area .links li a {
+  color: #5d5d5d;
+}
+
+.landing-page .header-area .links li:last-child {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 18px;
+  background-color: #409849;
+}
+
+.last-child {
+  color: #fff !important;
+}
+
+.landing-page .info {
+  width: 45%;
+  float: left;
+  margin-top: 200px;
+}
+
+.landing-page .info h1 {
+  font-size: 30px;
+  margin: 0 0 20px;
+  line-height: 1.4;
+  color: #5d5d5d;
+}
+
+.landing-page .info p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #5d5d5d;
+}
+
+.landing-page .info button {
+  border: 0;
+  /* border-radius: 20px; */
+  padding: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #409849;
+}
+
+.landing-page .image {
+  width: 50%;
+  float: right;
+  margin-top: 35px;
+}
+
+.landing-page .image img {
+  max-width: 100%;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.landing-page .rightInfo {
+  width: 40%;
+  float: right;
+  margin-top: 150px;
+}
+
+.landing-page .leftImage {
+  width: 50%;
+  float: left;
+  margin-top: 35px;
+}
+
+.landing-page .leftImage img {
+  max-width: 100%;
+}
+
+.landing-page .rightInfo h1 {
+  font-size: 30px;
+  margin: 0 0 20px;
+  line-height: 1.4;
+  color: #5d5d5d;
+}
+
+.landing-page .rightInfo p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #5d5d5d;
+}
+
+/* ss */
