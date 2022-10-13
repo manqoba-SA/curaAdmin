@@ -16,21 +16,16 @@ export default function Doctors() {
             </div>
             <div class="text-wrapper">
               <p class="text">
-                If you are a practicing doctor, then you must be aware of the
-                growing demand for doctors who can provide high-quality medical
-                care at the convenience of their own time. Cura app empowers
-                those seeking medical care to find doctors and make appointments
-                in real time over internet. Our platform is built on a
-                blockchain technology, which makes it safe and secure for both
-                parties involved while providing quick treatment times as well
-                as transparency of data.
+              If you are a practicing doctor, then you must be aware of the growing demand for doctors who can provide high-quality medical care at
+the convenience of their own time. Cura app empowers those seeking medical care to find doctors and make appointments in real time over internet.
+Our platform is built on a blockchain technology, which makes it safe and secure for both parties involved while providing quick treatment times as
+well as transparency of data.
+
               </p>
               <p class="text">
-                Our health care platform allows doctors to spend their time and
-                energy on what they do best – providing high-quality medical
-                care to patients. Patients can schedule appointments, receive
-                clear payment plans, and access useful medical information
-                easily with our simple system.
+              Our health care platform allows doctors to spend their time and energy on what they do best – providing high-quality medical care to patients.
+Patients can schedule appointments, receive clear payment plans, and access useful medical information easily with our simple system.
+
               </p>
               <div class="btn-wrapper">
                 <Link to="/doctor-apply" class="btn">
@@ -100,7 +95,7 @@ export default function Doctors() {
             <div class="box-top">
               <div class="profile">
                 <div class="profile-img">
-                  <img src={require("../../../assets/images/profile.png")} />
+                  <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" />
                 </div>
 
                 <div class="name-user">
@@ -112,11 +107,7 @@ export default function Doctors() {
 
             <div class="client-comment">
               <p>
-                I have been using the Cura software for some time now and I have
-                to say that there has definitely been a huge positive change in
-                the way I run my clinic practice now. Not only does it help
-                digitize my prescriptions, but also the communication lines
-                between my patients and me have opened up.
+              I have been using the Cura software for some time now and I have to say that there has definitely been a huge positive change in the way I run my clinic practice now. Not only does it help digitize my prescriptions, but also the communication lines between my patients and me have opened up.	
               </p>
             </div>
           </div>
@@ -125,7 +116,7 @@ export default function Doctors() {
             <div class="box-top">
               <div class="profile">
                 <div class="profile-img">
-                  <img src={require("../../../assets/images/profile.png")} />
+                  <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" />
                 </div>
 
                 <div class="name-user">
@@ -137,9 +128,8 @@ export default function Doctors() {
 
             <div class="client-comment">
               <p>
-                This App really makes my life easy as Doctors, as it helps me
-                get more clients, a day I receive 4 to 5 clients which I am able
-                to help them without meeting physical.
+              This App really makes my life easy as Doctors, as it helps me get more clients, a day I receive 4 to 5 clients which I am able to help them without meeting physical.
+
               </p>
             </div>
           </div>
@@ -148,7 +138,7 @@ export default function Doctors() {
             <div class="box-top">
               <div class="profile">
                 <div class="profile-img">
-                  <img src={require("../../../assets/images/profile.png")} />
+                  <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" />
                 </div>
 
                 <div class="name-user">
@@ -160,12 +150,8 @@ export default function Doctors() {
 
             <div class="client-comment">
               <p>
-                “I want my patients to know that they can bring up any topic
-                with me We see and hear everything, and it’s helpful for us to
-                know what’s worrying you. If you’re feeling not sure whether or
-                not you should say something, you probably should say it. If
-                you’re feeling on the fence, bring it up. We accept that people
-                come in with every potential history and past behaviour”
+              “I want my patients to know that they can bring up any topic with me We see and hear everything, and it’s helpful for us to know what’s worrying you. If you’re feeling not sure whether or not you should say something, you probably should say it. If you’re feeling on the fence, bring it up. We accept that people come in with every potential history and past behaviour”
+
               </p>
             </div>
           </div>
@@ -174,7 +160,7 @@ export default function Doctors() {
             <div class="box-top">
               <div class="profile">
                 <div class="profile-img">
-                  <img src={require("../../../assets/images/profile.png")} />
+                  <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" />
                 </div>
 
                 <div class="name-user">
@@ -186,13 +172,8 @@ export default function Doctors() {
 
             <div class="client-comment">
               <p>
-                With Cura app, prescription writing has become so much easier
-                for me. In this age of e-prescriptions, what better than Machine
-                Learning, auto dosage, vaccine & follow up reminders on SMS.
-                Cura learns the medicines I commonly prescribe for different
-                ailments. My prescription is complete in a few clicks, and I get
-                a a neat printout of the medicines along with dosage and
-                schedule.
+              With Cura app, prescription writing has become so much easier for me. In this age of e-prescriptions, what better than Machine Learning, auto dosage, vaccine & follow up reminders on SMS. Cura learns the medicines I commonly prescribe for different ailments. My prescription is complete in a few clicks, and I get a a neat printout of the medicines along with dosage and schedule.
+
               </p>
             </div>
           </div>

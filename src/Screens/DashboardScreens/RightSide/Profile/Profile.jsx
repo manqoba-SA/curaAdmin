@@ -44,13 +44,13 @@ export default function Profile() {
           </Row>
 
           <div classname="profile-btn-wrap">
-            <button className="btn btn-primary">Edit Profile</button>
+            <button className="btn">Edit Profile</button>
           </div>
           <div>
-            <button className="btn btn-primary">Change Password</button>
+            <button className="btn">Change Password</button>
           </div>
           <div>
-            <button onClick={logoutFunction} className="btn btn-primary">
+            <button onClick={logoutFunction} className="btn">
               Logout
             </button>
           </div>

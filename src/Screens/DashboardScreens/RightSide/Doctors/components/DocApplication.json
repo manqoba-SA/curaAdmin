@@ -1,97 +1,97 @@
 [
-  {
-    "id": 1,
-    "Fname": "Rea",
-    "Lname": "Sehlako",
-    "Location": "Johanessburg",
-    "Email": "rea@gmail.com",
-    "PhoneNumber": "1234567890",
-    "Speciality": "Dentist",
-    "MedicalRegistrationNumber": "23456789",
-    "MedicalRegistrationCouncil": "SAMC",
-    "YearsExperince": "5 years",
-    "PlaceofStudy": "UNISA",
-    "PatientsaDay": "5",
-    "HasClinic": "No"
-  },
-
-  {
-    "id": 2,
-    "Fname": "Manqoba",
-    "Lname": "Ngubeni",
-    "Location": "Johanessburg",
-    "Email": "man@gmail.com",
-    "PhoneNumber": "1234567890",
-    "Speciality": "Dentist",
-    "MedicalRegistrationNumber": "23456789",
-    "MedicalRegistrationCouncil": "SAMC",
-    "YearsExperince": "5 years",
-    "PlaceofStudy": "UNISA",
-    "PatientsaDay": "5",
-    "HasClinic": "No"
-  },
-
-  {
-    "id": 3,
-    "Fname": "Siya",
-    "Lname": "Dlhams",
-    "Location": "Cape Town",
-    "Email": "siya@gmail.com",
-    "PhoneNumber": "1234567890",
-    "Speciality": "General Practitioner",
-    "MedicalRegistrationNumber": "23456789",
-    "MedicalRegistrationCouncil": "SAMC",
-    "YearsExperince": "5 years",
-    "PlaceofStudy": "UNISA",
-    "PatientsaDay": "5",
-    "HasClinic": "No"
-  },
-
-  {
-    "id": 4,
-    "Fname": "Oratile",
-    "Lname": "Tlhabs",
-    "Location": "North West",
-    "Email": "ora@gmail.com",
-    "PhoneNumber": "1234567890",
-    "Speciality": "General Practitioner",
-    "MedicalRegistrationNumber": "23456789",
-    "MedicalRegistrationCouncil": "SAMC",
-    "YearsExperince": "5 years",
-    "PlaceofStudy": "UNISA",
-    "PatientsaDay": "5",
-    "HasClinic": "No"
-  },
-
-  {
-    "id": 5,
-    "Fname": "Butiza",
-    "Lname": "Mabodze",
-    "Location": "Limpopo",
-    "Email": "buti@gmail.com",
-    "PhoneNumber": "1234567890",
-    "Speciality": "General Practitioner",
-    "MedicalRegistrationNumber": "23456789",
-    "MedicalRegistrationCouncil": "SAMC",
-    "YearsExperince": "5 years",
-    "PlaceofStudy": "UNISA",
-    "PatientsaDay": "5",
-    "HasClinic": "No"
-  },
-
-  {
-    "id": 6,
-    "Fname": "Sabelo",
-    "Lname": "Khumalo",
-    "Location": "Soweto",
-    "Email": "sab@gmail.com",
-    "PhoneNumber": "1234567890",
-    "Speciality": "Dematologist",
-    "MedicalRegistrationNumber": "23456789",
-    "MedicalRegistrationCouncil": "SAMC",
-    "YearsExperince": "5 years",
-    "PlaceofStudy": "UNISA",
-    "PatientsaDay": "5",
-    "HasClinic": "No"
-  }
+    {
+        "id":1,
+        "Fname":"Rea",
+        "Lname": "Sehlako",
+        "Location":"Jozi",
+        "Email": "rea@gmail.com",
+        "PhoneNumber":"1234567890",
+        "Speciality": "Flu",
+        "MedicalRegistrationNumber":"23456789",
+        "MedicalRegistrationCouncil": "SAMC",
+        "YearsExperince":"5 years",
+        "PlaceofStudy":"UNISA",
+        "PatientsaDay":"5",
+        "HasClinic":"No"
+    },
+    
+    {
+        "id":2,
+        "Fname":"Manqoba",
+        "Lname": "Ngubeni",
+        "Location":"Jozi",
+        "Email": "man@gmail.com",
+        "PhoneNumber":"1234567890",
+        "Speciality": "covid",
+        "MedicalRegistrationNumber":"23456789",
+        "MedicalRegistrationCouncil": "SAMC",
+        "YearsExperince":"5 years",
+        "PlaceofStudy":"UNISA",
+        "PatientsaDay":"5",
+        "HasClinic":"No"
+    },
+    
+    {
+        "id":3,
+        "Fname":"Siya",
+        "Lname": "Dlhams",
+        "Location":"Marabastad",
+        "Email": "siya@gmail.com",
+        "PhoneNumber":"1234567890",
+        "Speciality": "monkey pox",
+        "MedicalRegistrationNumber":"23456789",
+        "MedicalRegistrationCouncil": "SAMC",
+        "YearsExperince":"5 years",
+        "PlaceofStudy":"UNISA",
+        "PatientsaDay":"5",
+        "HasClinic":"No"
+    },
+    
+    {
+        "id":4,
+        "Fname":"Oratile",
+        "Lname": "Tlhabs",
+        "Location":"NW",
+        "Email": "ora@gmail.com",
+        "PhoneNumber":"1234567890",
+        "Speciality": "TB",
+        "MedicalRegistrationNumber":"23456789",
+        "MedicalRegistrationCouncil": "SAMC",
+        "YearsExperince":"5 years",
+        "PlaceofStudy":"UNISA",
+        "PatientsaDay":"5",
+        "HasClinic":"No"
+    },
+    
+    {
+        "id":5,
+        "Fname":"Butiza",
+        "Lname": "Mabodze",
+        "Location":"Limpopo",
+        "Email": "buti@gmail.com",
+        "PhoneNumber":"1234567890",
+        "Speciality": "bile",
+        "MedicalRegistrationNumber":"23456789",
+        "MedicalRegistrationCouncil": "SAMC",
+        "YearsExperince":"5 years",
+        "PlaceofStudy":"UNISA",
+        "PatientsaDay":"5",
+        "HasClinic":"No"
+    },
+    
+    {
+        "id":6,
+        "Fname":"Sabelo",
+        "Lname": "Khumalo",
+        "Location":"Soweto",
+        "Email": "sab@gmail.com",
+        "PhoneNumber":"1234567890",
+        "Speciality": "migraine",
+        "MedicalRegistrationNumber":"23456789",
+        "MedicalRegistrationCouncil": "SAMC",
+        "YearsExperince":"5 years",
+        "PlaceofStudy":"UNISA",
+        "PatientsaDay":"5",
+        "HasClinic":"No"
+    }
 ]

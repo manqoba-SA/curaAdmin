@@ -7,7 +7,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
-import { getFirestore, initializeFirestore } from "firebase/firestore";
+import {initializeFirestore } from "firebase/firestore";
 import "firebase/storage";
 import { getStorage } from "firebase/storage";
 
@@ -22,7 +22,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-
+//const db = getFirestore(app);
 //init services
 const auth = getAuth();
 export const firestore = initializeFirestore(app, {
@@ -35,6 +35,7 @@ export default storage;
 
 export {
   auth,
+  //db,
   createUserWithEmailAndPassword,
   updateProfile,
   onAuthStateChanged,

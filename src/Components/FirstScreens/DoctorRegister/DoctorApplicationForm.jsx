@@ -1,5 +1,5 @@
 import { async } from "@firebase/util";
-import { doc, setDoc } from "firebase/firestore";
+import { collection, addDoc, doc, setDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import React from "react";
 import { useState } from "react";
@@ -35,6 +35,41 @@ export default function DoctorApplicationForm() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const history = useHistory();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (firstName !== "") {
+      await addDoc(collection(firestore, "DoctorsApplication"), {
+        firstName,
+        lastName,
+        certificate,
+        email,
+        phone,
+        location,
+        patients,
+        aboutDoctor,
+        speciality,
+        medRegCouncil,
+        medRegNum,
+        yearsEx,
+        study,
+        clinic,
+      });
+      setFirstName("");
+      setLastName("");
+      setCerticate("");
+      setEmail("");
+      setPhone("");
+      setLocation("");
+      setPatients("");
+      setAboutDoctor("");
+      setSpeciality("");
+      setMedRegCouncil("");
+      setmedRegNum("");
+      setYearsEx("");
+      setStudy("");
+      setClinic("");
+    }
+  };
 
   console.log(email);
 
@@ -80,7 +115,7 @@ export default function DoctorApplicationForm() {
           console.log(url);
           const doctorApplicationRef = doc(
             firestore,
-            "DoctorsApplications",
+            "DoctorsApplication",
             user
           );
           await setDoc(doctorApplicationRef, {
@@ -113,7 +148,7 @@ export default function DoctorApplicationForm() {
     <div class="container">
       <div class="row">
         <div class="col-xs-12 container">
-          <form role="form" onSubmit={formHandler}>
+          <form role="form" onSubmit={handleSubmit}>
             <h2>
               <b>
                 Please fill in the following details to apply to be a doctor on
@@ -127,6 +162,7 @@ export default function DoctorApplicationForm() {
               <div class="col-xs-6 col-sm-6 col-md-6">
                 <CustomInput
                   label="First Name"
+                  value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
                 />
               </div>
@@ -141,12 +177,14 @@ export default function DoctorApplicationForm() {
               <div class="col-xs-6 col-sm-6 col-md-6">
                 <CustomInput
                   label="Email"
+                  value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div class="col-xs-6 col-sm-6 col-md-6">
                 <CustomInput
                   label="Phone Number"
+                  value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                 />
               </div>
@@ -157,12 +195,14 @@ export default function DoctorApplicationForm() {
                 <CustomSelect
                   label={"Your Speciality"}
                   options={doctorSpecialist}
+                  value={speciality}
                   onChange={(e) => setSpeciality(e.target.value)}
                 />
               </div>
               <div class="col-xs-6 col-sm-6 col-md-6">
                 <CustomInput
                   label="Your Location/Address"
+                  value={location}
                   onChange={(e) => setLocation(e.target.value)}
                 />
               </div>
@@ -171,6 +211,7 @@ export default function DoctorApplicationForm() {
             <CustomInput
               label="Tell us about you"
               type="text-area"
+              value={aboutDoctor}
               onChange={(e) => setAboutDoctor(e.target.value)}
             />
 
@@ -183,6 +224,7 @@ export default function DoctorApplicationForm() {
                 <CustomInput
                   label="
                 Your Medical Registration Number"
+                  value={medRegNum}
                   onChange={(e) => setmedRegNum(e.target.value)}
                 />
               </div>
@@ -190,6 +232,7 @@ export default function DoctorApplicationForm() {
                 <CustomInput
                   label="
                 Your Medical Registration Council"
+                  value={setMedRegCouncil}
                   onChange={(e) => setMedRegCouncil(e.target.value)}
                 />
               </div>
@@ -200,6 +243,7 @@ export default function DoctorApplicationForm() {
                 <CustomInput
                   label="
                 What is your experience in years?"
+                  value={yearsEx}
                   onChange={(e) => setYearsEx(e.target.value)}
                 />
               </div>
@@ -207,6 +251,7 @@ export default function DoctorApplicationForm() {
                 <CustomInput
                   label="
                 Where did you study?"
+                  value={study}
                   onChange={(e) => setStudy(e.target.value)}
                 />
                 <small>Can be latest institution you attended</small>
@@ -218,6 +263,7 @@ export default function DoctorApplicationForm() {
                 <CustomInput
                   label="
                 How many patients do you see in a day?"
+                  value={patients}
                   onChange={(e) => setPatients(e.target.value)}
                 />
               </div>
@@ -229,6 +275,7 @@ export default function DoctorApplicationForm() {
                     { label: "Yes", value: "yes" },
                     { label: "No", value: "no" },
                   ]}
+                  value={clinic}
                   onChange={(e) => setClinic(e.target.value)}
                 />
               </div>
@@ -239,7 +286,9 @@ export default function DoctorApplicationForm() {
               label="
                 "
               type="file"
-              onChange={formHandler}
+              value={certificate}
+              onChange={(e) => setCerticate(e.target.value)}
+              //onChange={formHandler}
             />
 
             <h3>
@@ -282,8 +331,8 @@ export default function DoctorApplicationForm() {
                 <button
                   class="btn"
                   tabindex="7"
-                  disabled={loading}
-                  onClick={onSubmit}
+                  // disabled={loading}
+                  // onClick={onSubmit}
                 >
                   Submit
                 </button>

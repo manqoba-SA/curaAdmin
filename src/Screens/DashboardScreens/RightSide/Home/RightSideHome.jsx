@@ -1,8 +1,69 @@
 import React from "react";
 import UsersTable from "./components/UsersTable";
 import "./style.css";
+import { collection, getDocs } from "firebase/firestore";
+import storage, { firestore } from "../../../../firebase/firebase";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function RightSideHome() {
+  const [doctors, setDoctors] = useState([]);
+  useEffect(() => {
+    const getData = async () => {
+      const docDetails = await getDocs(collection(firestore, "doctors"));
+      setDoctors(docDetails.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+    getData();
+  }, []);
+  const DisplayData = doctors.map((data) => {
+    return (
+      <tr>
+        <td>
+          <h4>Dr. {data.name}</h4>
+        </td>
+        <td>
+          <p>{data.title}</p>
+        </td>
+        <td>
+          <p>Patients: {data.customers}</p>
+        </td>
+      </tr>
+    );
+  });
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  const [Applydoctors, setApplyDoctors] = useState([]);
+  useEffect(() => {
+    const getDataApply = async () => {
+      const ApplydocDetails = await getDocs(
+        collection(firestore, "DoctorsApplication")
+      );
+      setApplyDoctors(
+        ApplydocDetails.docs.map((docApply) => ({
+          ...docApply.data(),
+          id: docApply.id,
+        }))
+      );
+    };
+    getDataApply();
+  }, []);
+
+  const DisplayDataApply = Applydoctors.map((dataApply) => {
+    return (
+      <tr>
+        <div key={dataApply.id}>
+          <td>
+            <h4>Dr. {dataApply.lastName}</h4>
+          </td>
+        </div>
+        <td>
+          <p>{dataApply.speciality}</p>
+        </td>
+        <td>
+          <p>Patients: {dataApply.patients}</p>
+        </td>
+      </tr>
+    );
+  });
   return (
     <div className="right-side-component">
       <div className="right-side-flex">
@@ -13,13 +74,13 @@ export default function RightSideHome() {
               <h3>
                 Total <br /> Users
               </h3>
-              <h1>5</h1>
+              <h1>56</h1>
             </div>
             <div className="right-side-component__cards__card">
               <h3>
                 Total <br /> Doctors
               </h3>
-              <h1>10</h1>
+              <h1>12</h1>
             </div>
             <div className="right-side-component__cards__card">
               <h3>
@@ -38,25 +99,12 @@ export default function RightSideHome() {
           </div>
         </div>
         <div className="right-side-flex-item2">
-          {/* <h4>Check what's happening on the app today</h4> */}
           <div className="right-side-component__card2">
             <h3>Cura Health Doctors</h3>
             <div className="right-side-component__card__content">
-              <div className="right-side-component__card__content__item2">
-                <h4>Dr. Siyabonga</h4>
-                <p>Dentist</p>
-                <p>Patients: 2</p>
-              </div>
-              <div className="right-side-component__card__content__item2">
-                <h4>Dr. Lerato</h4>
-                <p>Dermatologist</p>
-                <p>Patients: 5</p>
-              </div>
-              <div className="right-side-component__card__content__item2">
-                <h4>Dr. Oratile</h4>
-                <p>General Practitioner</p>
-                <p>Patients: 3</p>
-              </div>
+              <table className="right-side-component__card__content__item2">
+                <tbody>{DisplayData}</tbody>
+              </table>
             </div>
 
             <div className="btn-container">
@@ -64,27 +112,16 @@ export default function RightSideHome() {
             </div>
           </div>
 
-          {/* Applied Doctors */}
           <div className="right-side-component__card2">
             <h3>Doctors Applications</h3>
             <div className="right-side-component__card__content">
               <div className="right-side-component__card__content__item2">
-                <h4>Dr. Manqoba</h4>
-                <p>General Practitioner</p>
-                <p>Jhb</p>
-              </div>
-              <div className="right-side-component__card__content__item2">
-                <h4>Dr. Nhlalala</h4>
-                <p>Oncologists</p>
-                <p>Dbn</p>
-              </div>
-              <div className="right-side-component__card__content__item2">
-                <h4>Dr. Rea</h4>
-                <p>Dentist</p>
-                <p>Cpt</p>
+                <table className="right-side-component__card2">
+                  <tbody>{DisplayDataApply}</tbody>
+                </table>
               </div>
             </div>
-
+            <div className="right-side-component__card__content"></div>
             <div className="btn-container">
               <button className="view-all-btn">View All</button>
             </div>

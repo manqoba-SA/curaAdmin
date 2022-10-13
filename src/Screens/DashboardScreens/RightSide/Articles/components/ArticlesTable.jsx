@@ -24,6 +24,7 @@ export default function ArticlesTable() {
     return (
       <tr>
         {/* <td>{article.id}</td> */}
+        <td>{article.author}</td>
         <div key={article.id}>
           <td>
             <Link to={`/DoctorApplicationDetails/${article.id}`}>
@@ -31,10 +32,10 @@ export default function ArticlesTable() {
             </Link>
           </td>
         </div>
-        <td>{article.Lname}</td>
-        <td>{article.Speciality}</td>
-        <td>{article.Location}</td>
-        <td>{article.Email}</td>
+        
+        {/* <td>{article.topic}</td> */}
+        <td>{article.readTime}</td>
+        <td>{article.category}</td>
       </tr>
     );
   });
@@ -46,7 +47,7 @@ export default function ArticlesTable() {
             {/* <th>Sr.NO</th> */}
             <th>Author</th>
             <th>Topic</th>
-            <th>Date Posted</th>
+            {/*<th>Date Posted</th>*/}
             <th>Read Time</th>
             <th>Category</th>
           </tr>

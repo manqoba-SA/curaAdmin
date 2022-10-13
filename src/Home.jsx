@@ -93,7 +93,7 @@ class Home extends Component {
                     <div class="profile-photo">
                       <img src={logo} alt="Cura Logo" />
                     </div>
-                    <div style={{ color: "black" }}>{data.name}</div>
+                    {/* <div style={{ color: "black" }}>{data.name}</div> */}
                     <div>{data.sales}</div>
                     {data.revenue}
                   </div>

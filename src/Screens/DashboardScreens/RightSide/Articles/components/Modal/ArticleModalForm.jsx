@@ -101,10 +101,10 @@ export default function ArticleModalForm({
       </Modal.Body>
       <Modal.Footer>
         {/* <Button onClick={handleClose}>Close</Button> */}
-        <button className="btn" onClick={onSubmit}>
+        <button className="btn btn-primary" onClick={onSubmit}>
           Submit
         </button>
-        <button className="btn" onClick={handleClose}>
+        <button className="btn btn-primary" onClick={handleClose}>
           {" "}
           Close{" "}
         </button>

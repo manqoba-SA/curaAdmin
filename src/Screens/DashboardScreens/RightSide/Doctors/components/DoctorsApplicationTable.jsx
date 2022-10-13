@@ -1,18 +1,32 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import JsonData from "./DocApplication.json";
+import { useState, useEffect } from 'react';
+// import storage, { auth, createUserWithEmailAndPassword, firestore} from "../../../firebase/firebase";
+import storage, {firestore} from '../../../../../firebase/firebase';
+import { collection, getDocs, doc, setDoc } from "firebase/firestore";
+// import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
+// import JsonData from "./DocApplication.json";
     
 export default function DoctorsApplicationTable(DoctorApplicationDetails, id) {
-    const DisplayData = JsonData.map((info) => {
+  const [doctors, setDoctors] = useState([]);
+  useEffect(() =>{
+    const getData = async () => {
+      const docDetails = await getDocs(collection(firestore, "DoctorsApplication"));
+      setDoctors(docDetails.docs.map((doc) => ({...doc.data(), id: doc.id})));
+    };
+    getData();
+  }, []);  
+  console.log(doctors);
+  const DisplayData = doctors.map((data) => {
         return (
           <tr >
             {/* <td>{info.id}</td> */}
-            <div key={JsonData.id}>
-            <td><Link to={`/DoctorApplicationDetails/${info.id}`}>{info.Fname}</Link></td></div>
-            <td>{info.Lname}</td>
-            <td>{info.Speciality}</td>
-            <td>{info.Location}</td>
-            <td>{info.Email}</td>
+            <div key={data.id}>
+            <td><Link to={`/DoctorApplicationDetails/${data.id}`}>{data.firstName}</Link></td></div>
+            <td>{data.lastName}</td>
+            <td>{data.speciality}</td>
+            <td>{data.location}</td>
+            <td>{data.email}</td>
           </tr>
         );
       });
