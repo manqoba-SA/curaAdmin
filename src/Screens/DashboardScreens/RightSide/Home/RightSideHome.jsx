@@ -52,15 +52,17 @@ export default function RightSideHome() {
       <tr>
         <div key={dataApply.id}>
           <td>
-            <h4>Dr. {dataApply.lastName}</h4>
+            <Link to={`/doctor-application/${dataApply.id}`}>
+              <h4>Dr. {dataApply.lastName}</h4>
+            </Link>
           </td>
         </div>
         <td>
-          <p>{dataApply.speciality}</p>
+          <p>{dataApply.Speciality}</p>
         </td>
-        <td>
+        {/* <td>
           <p>Patients: {dataApply.patients}</p>
-        </td>
+        </td> */}
       </tr>
     );
   });

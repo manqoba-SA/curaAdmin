@@ -12,6 +12,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase/firebase";
 import { login, logout, selectUser } from "./redux/features/userSlice";
 import { useDispatch, useSelector } from "react-redux";
+import Loading from "./Components/Common/LoadingComponent/Loading";
 function App() {
   const user = useSelector(selectUser);
   const [loading, setLoading] = useState(false);
@@ -29,14 +30,17 @@ function App() {
             displayName: userAuth.displayName,
           })
         );
-        // setIsReady(true);
+        setLoading(false);
       } else {
         dispatch(logout());
-        // setIsReady(true);
+        setLoading(false);
       }
     });
   }, []);
 
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <div className="app">
       {user ? (

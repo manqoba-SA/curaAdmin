@@ -1,14 +1,13 @@
 import React from "react";
 
-export default function CustomSelect({ label, options }) {
+export default function CustomSelect({ label, options, value, onChange }) {
   return (
     <div class="txt_field">
-      <select>
+      <select value={value} onChange={onChange}>
         {options.map((option) => (
           <option value={option.value}>{option.label}</option>
         ))}
       </select>
-      <span></span>
       <label>{label}</label>
     </div>
   );

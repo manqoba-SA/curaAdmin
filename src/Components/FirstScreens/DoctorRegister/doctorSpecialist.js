@@ -24,6 +24,8 @@ const doctorSpecialist = [
   { label: "Pulmonologist", value: "pulmonologist" },
   { label: "Rheumatologist", value: "rheumatologist" },
   { label: "Urologist", value: "urologist" },
+  { label: "Nutritionist", value: "nutritionist" },
+  { label: "Herbalist", value: "herbalist" },
 ];
 
 export default doctorSpecialist;

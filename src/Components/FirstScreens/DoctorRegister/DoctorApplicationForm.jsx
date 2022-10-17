@@ -8,6 +8,7 @@ import storage, {
   auth,
   createUserWithEmailAndPassword,
   firestore,
+  signOut,
 } from "../../../firebase/firebase";
 import CustomInput from "../../Common/CustomInput/CustomInput";
 import CustomSelect from "../../Common/CustomSelect";
@@ -24,7 +25,7 @@ export default function DoctorApplicationForm() {
   const [location, setLocation] = useState("");
   const [patients, setPatients] = useState("");
   const [aboutDoctor, setAboutDoctor] = useState("");
-  const [speciality, setSpeciality] = useState("");
+  const [speciality, setSpeciality] = useState(doctorSpecialist[0].value);
   const [medRegCouncil, setMedRegCouncil] = useState("");
   const [medRegNum, setmedRegNum] = useState("");
   const [yearsEx, setYearsEx] = useState("");
@@ -35,6 +36,7 @@ export default function DoctorApplicationForm() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const history = useHistory();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (firstName !== "") {
@@ -71,8 +73,6 @@ export default function DoctorApplicationForm() {
     }
   };
 
-  console.log(email);
-
   const onSubmit = () => {
     setLoading(true);
     if (pwd1 != pwd2) {
@@ -81,8 +81,24 @@ export default function DoctorApplicationForm() {
     } else {
       createUserWithEmailAndPassword(auth, email, pwd1)
         .then((userAuth) => {
-          // uploadFiles(certificate, userAuth.user.uid)
-          console.log("FDSFD");
+          setDoc(doc(firestore, "users", userAuth.user.uid), {
+            firstName,
+            lastName,
+            email,
+            phone,
+            location,
+            patients,
+            aboutDoctor,
+            speciality,
+            medRegCouncil,
+            medRegNum,
+            yearsEx,
+            study,
+            clinic,
+            userType: "doctor",
+            status: "application-pending",
+          });
+          uploadFiles(certificate, userAuth.user.uid);
         })
         .catch((error) => {
           setError(error.message);
@@ -94,12 +110,11 @@ export default function DoctorApplicationForm() {
     e.preventDefault();
     const file = e.target.files[0];
     setCerticate(file);
-    // uploadFiles(file);
   };
+
   const uploadFiles = (file, user) => {
-    //
     if (!file) return;
-    const storageRef = ref(storage, `/files/${Date.now()}`);
+    const storageRef = ref(storage, `/files/doctorsApplications/${Date.now()}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
     uploadTask.on(
       "state_changed",
@@ -144,11 +159,15 @@ export default function DoctorApplicationForm() {
       }
     );
   };
+  console.log(clinic);
   return (
     <div class="container">
       <div class="row">
         <div class="col-xs-12 container">
-          <form role="form" onSubmit={handleSubmit}>
+          <form
+            role="form"
+            // onSubmit={handleSubmit}
+          >
             <h2>
               <b>
                 Please fill in the following details to apply to be a doctor on
@@ -287,7 +306,7 @@ export default function DoctorApplicationForm() {
                 "
               type="file"
               value={certificate}
-              onChange={(e) => setCerticate(e.target.value)}
+              onChange={formHandler}
               //onChange={formHandler}
             />
 
@@ -331,8 +350,8 @@ export default function DoctorApplicationForm() {
                 <button
                   class="btn"
                   tabindex="7"
-                  // disabled={loading}
-                  // onClick={onSubmit}
+                  disabled={loading}
+                  onClick={onSubmit}
                 >
                   Submit
                 </button>

@@ -54,12 +54,10 @@ export default function DashboardRoutes() {
         <Route path="/user/1">
           <UserDetails />
         </Route>
-        <Route path="/DoctorApplicationDetails/:id">
+        <Route path="/doctor-application/:id">
           <DoctorApplicationDetails />
         </Route>
-        <Route path="/DoctorApplicationDetails">
-          <DoctorApplicationDetails />
-        </Route>
+
         <Route path="/appointments">
           <Appointments />
         </Route>

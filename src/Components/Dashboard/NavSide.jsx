@@ -27,7 +27,6 @@ export default function NavSide() {
     <aside>
       <div class="top">
         <div class="logo">
-          {/* <img src={logo} alt="Cura Logo" /> */}
           <h2>CuraAdmin</h2>
         </div>
       </div>
@@ -36,48 +35,52 @@ export default function NavSide() {
           <>
             <Link to="/" class="active">
               <span class="material-icons-sharp">home</span>
-              <h3>Dashboard</h3>
+              <h4>Dashboard</h4>
             </Link>
             <Link to="/users">
               <span class="material-icons-sharp">person_outline</span>
-              <h3>Users</h3>
+              <h4>Users</h4>
             </Link>
             <Link to="/Doctors">
               <span class="material-icons-sharp">vaccines</span>
-              <h3>Doctors</h3>
+              <h4>Doctors</h4>
             </Link>
             <Link to="/vendors">
               <span class="material-icons-sharp">memory</span>
-              <h3>Vendors</h3>
+              <h4>Vendors</h4>
             </Link>
             <Link to="/articles">
               <span class="material-icons-sharp">newspaper</span>
-              <h3>Articles</h3>
+              <h4>Articles</h4>
             </Link>
             <Link to="/Settings">
               <span class="material-icons-sharp">settings</span>
-              <h3>Settings</h3>
+              <h4>Settings</h4>
             </Link>
             <Link to="/Logout">
               <span class="material-icons-sharp">logout</span>
-              <h3>Logout</h3>
+              <h4>Logout</h4>
             </Link>
           </>
         )}
         {user?.userType === "doctor" && (
           <>
-            <Link to="/Doctors">
-              <span class="material-icons-sharp">vaccines</span>
-              <h3>Patients</h3>
-            </Link>
-            <Link to="/Doctors">
-              <span class="material-icons-sharp">vaccines</span>
-              <h3>Appointments</h3>
-            </Link>
-            <Link to="/Logout">
-              <span class="material-icons-sharp">logout</span>
-              <h3>Logout</h3>
-            </Link>
+            {user?.status === "application-pending" ? null : (
+              <>
+                <Link to="/Doctors">
+                  <span class="material-icons-sharp">vaccines</span>
+                  <h4>Patients</h4>
+                </Link>
+                <Link to="/Doctors">
+                  <span class="material-icons-sharp">vaccines</span>
+                  <h4>Appointments</h4>
+                </Link>
+                <Link to="/Logout">
+                  <span class="material-icons-sharp">logout</span>
+                  <h40>Logout</h40>
+                </Link>
+              </>
+            )}
           </>
         )}
         {user?.userType === "vendor" && (
